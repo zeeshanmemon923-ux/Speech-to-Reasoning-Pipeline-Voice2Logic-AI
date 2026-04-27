@@ -1,11 +1,10 @@
-# 🎙️ Speech-to-Reasoning Pipeline
-### Whisper ASR → Quantized LLM (Unsloth Dynamic 4-bit)
+"Speech-to-Reasoning Pipeline"
+Whisper ASR → Quantized LLM (Unsloth Dynamic 4-bit)
 
 A complete end-to-end pipeline that transcribes **spoken audio into text** using OpenAI's Whisper, then feeds that transcription into a **quantized reasoning LLM** (Qwen2.5-7B via Unsloth) to generate step-by-step logical answers — all running in a single Google Colab notebook on a free T4 GPU.
 
----
 
-## 🔁 Pipeline Architecture
+##  Pipeline Architecture
 
 ```
 Audio File (WAV / MP3 / M4A / FLAC)
@@ -34,7 +33,7 @@ Audio File (WAV / MP3 / M4A / FLAC)
 
 ---
 
-## ✨ Features
+## Features
 
 - 🎤 **Automatic Speech Recognition** — Whisper `small` / `medium` / `large-v3` support
 - 🤖 **4-bit Quantized LLM** — ~60% less VRAM vs float16, 2× faster inference via Unsloth
@@ -47,7 +46,7 @@ Audio File (WAV / MP3 / M4A / FLAC)
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### 1. Open in Google Colab
 
@@ -86,7 +85,7 @@ Run **Step 12** cell and click **"Choose Files"** to upload your own `.wav` or `
 
 ---
 
-## 🤖 Supported Models
+##  Supported Models
 
 ### Whisper (ASR)
 
@@ -152,7 +151,7 @@ print(result["metrics"])        # tokens/sec, VRAM, timing
 
 ---
 
-## 🧠 Memory Management
+##  Memory Management
 
 The pipeline frees Whisper from GPU VRAM before loading the LLM to avoid OOM errors on a 16 GB T4:
 
