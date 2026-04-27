@@ -1,0 +1,145 @@
+# ─────────────────────────────────────────────────────────────
+# .gitignore — Speech-to-Reasoning Pipeline
+# ─────────────────────────────────────────────────────────────
+
+# ── Audio Files ───────────────────────────────────────────────
+# Exclude generated and uploaded audio samples
+*.mp3
+*.wav
+*.flac
+*.m4a
+*.ogg
+*.aac
+*.opus
+*.wma
+sample_query.mp3
+math_query.mp3
+logic_query.mp3
+science_query.mp3
+
+# ── Model Weights & Caches ────────────────────────────────────
+# HuggingFace model cache (can be gigabytes)
+.cache/
+~/.cache/huggingface/
+huggingface_cache/
+model_cache/
+
+# Whisper model cache
+~/.cache/whisper/
+whisper_cache/
+
+# Unsloth / GGUF weights
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.gguf
+*.ggml
+
+# ── Python ───────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ── Jupyter Notebooks ─────────────────────────────────────────
+# Keep .ipynb files but ignore checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# Optional: uncomment to ignore notebook output cells
+# Useful for clean diffs (strip output before committing)
+# *.ipynb
+
+# ── Google Colab ─────────────────────────────────────────────
+# Colab-specific drive mount artifacts
+/content/
+/drive/
+
+# ── Environment & Secrets ─────────────────────────────────────
+.env
+.env.*
+.envrc
+*.env
+secrets.json
+credentials.json
+api_keys.txt
+config.local.py
+
+# ── OS Artifacts ─────────────────────────────────────────────
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# ── IDE & Editor ─────────────────────────────────────────────
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+.ropeproject
+
+# ── Logs & Outputs ────────────────────────────────────────────
+logs/
+*.log
+output/
+outputs/
+results/
+*.out
+
+# ── Temporary Files ───────────────────────────────────────────
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# ── Coverage & Testing ───────────────────────────────────────
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.pytest_cache/
+.tox/
+nosetests.xml
+
+# ── Documentation Build ──────────────────────────────────────
+docs/_build/
+site/
